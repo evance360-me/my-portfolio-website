@@ -1,0 +1,331 @@
+/* base reset + your original colors kept where appropriate */
+
+* {
+    scrollbar-width: none;
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+body {
+    color: azure;
+    background-color: black;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+
+
+/* header */
+
+.topbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 28px;
+    color: azure
+}
+
+.folio {
+    color: aqua
+}
+
+.navbar {
+    display: flex;
+    gap: 16px
+}
+
+.navlink {
+    color: aliceblue;
+    padding: 8px 12px;
+    border-radius: 6px
+}
+
+
+/* hero area */
+
+.hero {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    gap: 24px;
+    padding: 18px;
+    align-items: center
+}
+
+.photo img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px
+}
+
+.details {
+    color: azure
+}
+
+.greeting {
+    color: aqua;
+    margin: 0
+}
+
+.name {
+    margin: .2rem 0 1rem 0
+}
+
+.role {
+    margin: 0 0 8px 0
+}
+
+.follow {
+    margin: 0 0 12px 0;
+    color: #ccc
+}
+
+
+/* social buttons: aqua icon, aqua border, transparent background */
+
+.social {
+    display: flex;
+    gap: 8px
+}
+
+.social.small {
+    margin-top: 8px
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: 2px solid aqua;
+    background: transparent;
+    color: aqua;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform .25s ease, background .25s;
+}
+
+.social-btn:hover {
+    transform: scale(1.08);
+    background: rgba(0, 0, 0, 0.25)
+}
+
+
+/* Combined tab section */
+
+.tab-section {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px
+}
+
+.tabs {
+    overflow: hidden;
+    position: relative;
+    left: 900px;
+    bottom: 500px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px
+}
+
+.tab-btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: transparent;
+    color: azure;
+    cursor: pointer
+}
+
+.tab-btn.active {
+    background: rgba(0, 128, 128, 0.12);
+    border-color: aqua;
+    color: aqua
+}
+
+.tab-content {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 16px;
+    border-radius: 8px
+}
+
+
+/* tab panes */
+
+.tab-pane {
+    display: none
+}
+
+.tab-pane.active {
+    display: block
+}
+
+
+/* about layout */
+
+.about-inner {
+    display: flex;
+    gap: 18px;
+    align-items: center
+}
+
+.about-photo {
+    width: 360px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px
+}
+
+.about-text h2 {
+    margin-top: 0
+}
+
+
+/* services grid */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 12px
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: transform 1.5s ease, box-shadow .3s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6)
+}
+
+.service-head {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: aqua
+}
+
+.service-head i {
+    color: aqua
+}
+
+.service-head h3 {
+    margin: 0;
+    color: aliceblue
+}
+
+
+/* description overlay visible on hover */
+
+.service-card .desc {
+    margin-top: 12px;
+    color: #dfeff0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .35s ease, transform .35s ease;
+    font-size: 0.95rem;
+}
+
+.service-card:hover .desc {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+
+/* tech list */
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.tech-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d0eef0
+}
+
+.tech-list i {
+    color: aqua
+}
+
+
+/* contact form */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 480px
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    color: azure
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.02);
+    color: azure
+}
+
+.btn-submit {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    background: aqua;
+    color: black;
+    cursor: pointer
+}
+
+
+/* small screens */
+
+@media(max-width:780px) {
+    .hero {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .about-inner {
+        flex-direction: column
+    }
+
+    .photo img,
+    .about-photo {
+        width: 260px;
+        height: 300px
+    }
+}

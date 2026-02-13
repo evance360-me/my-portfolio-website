@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evance portfolio Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for social & tech icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">
+            <h1>Port<span class="folio">folio</span></h1>
+        </div>
+
+        <!---- <nav class="navbar">
+            <a class="navlink" href="#">Home</a>
+            <a class="navlink" href="#about-services">About / Services / Contact</a>
+        </nav>---->
+    </header>
+
+    <main class="hero">
+        <div class="photo">
+            <img src="my photo1.jpg " alt="my photo">
+        </div>
+
+        <div class="details">
+            <h3 class="greeting">Hello, It's Me</h3>
+            <h1 class="name">Mr. Evance Dionis</h1>
+
+            <p class="role">And I'm a <span class="word">Frontend Developer</span> ,and kiswahili teacher</p>
+
+            <p class="follow">Also more about my works — follow me to the following social media:</p>
+
+            <div class="social">
+
+                <a class="social-btn" href="http://wa.me/+255779382525" target="_blank" aria-label="whatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a class="social-btn" href="https://youtube.com/@evancechrisostom?si=s8BtlPdeMSMx7c2s" target="_blank"
+                    aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a class="social-btn" href="https://www.fb.com/l/6lp1kJRRR" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Combined About / Services / Contact tab -->
+    <section id="about-services" class="tab-section">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="about">About</button>
+            <button class="tab-btn" data-tab="services">Services</button>
+            <button class="tab-btn" data-tab="contact">Contact</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="about" class="tab-pane active">
+                <div class="about-inner">
+                    <img src="my phot2.jpg" alt="about photo" class="about-photo">
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>I am Evance Dionis — a frontend developer focused on creating beautiful, responsive and
+                            accessible user experiences. I combine visual design and front-end coding to deliver
+                            practical, polished websites and products.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="services" class="tab-pane">
+                <h2>Services</h2>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <div class="service-head">
+                            <i class="fa-solid fa-pencil-ruler fa-2x"></i>
+                            <h3>Graphic Design</h3>
+                        </div>
+                        <div class="desc">
+                            <p>I create logos, posters, social media graphics and brand assets. Work includes concept,
+                                color systems, typography and exportable files for print & web.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-head">
+                            <i class="fa-solid fa-layer-group fa-2x"></i>
+                            <h3>language Expert</h3>
+                        </div>
+                        <div class="desc">
+                            <p>welcome I can teach you kiswahili language in a best level
+                                and become the expert in kiswahili
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-head">
+                            <i class="fa-solid fa-code fa-2x"></i>
+                            <h3>Website Creation</h3>
+                        </div>
+                        <div class="desc">
+                            <p>Full stack website creation: semantic HTML, modern CSS (Flexbox / Grid), and
+                                where needed. Languages & tools commonly used:</p>
+                            <ul class="tech-list">
+                                <li><i class="fa-brands fa-html5"></i> HTML5</li>
+                                <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+                                <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="contact" class="tab-pane">
+                <h2>Contact</h2>
+                <form id="contact-form" class="contact-form" action="https://formsubmit.co/evancechrisostom05@gmail.com"
+                    method="POST">
+                    <!-- Optional: subject for the received email -->
+                    <input type="hidden" name="_subject" value="New contact from portfolio">
+                    <!-- Disable Formsubmit captcha (optional) -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Honeypot field to reduce spam (leave empty) -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Redirect back to same page or a thank-you page after submission -->
+                    <input type="hidden" name="_next" value="./portifolio.html">
+
+                    <label>Full Name<input name="name" required></label>
+                    <label>Email<input type="email" name="email" required></label>
+                    <label>Message<textarea name="message" rows="4"></textarea></label>
+                    <button class="btn-submit" type="submit">Send</button>
+                </form>
+
+                <div class="contact-info">
+                    <p>Office: Arusha, Tanzania</p>
+                    <p>Phone: +255 779 382 525</p>
+                    <p>Email: <a href="mailto:evancechrisostom05@gmail.com">evancechrisostom05@gmail.com</a></p>
+                    <p>Follow on social media:</p>
+                    <div class="social small">
+
+                        <a class="social-btn" href="http://wa.me/+255 779 382 525" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a class="social-btn" href="https://youtube.com/@evancechrisostom?si=s8BtlPdeMSMx7c2s"
+                            target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="social-btn" href="https://www.fb.com/l/6lp1kJRRR" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // simple tabs
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
